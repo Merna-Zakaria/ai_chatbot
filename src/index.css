@@ -19,5 +19,17 @@ code {
   background-color: #1B252B;
 }
 .bg-darkBlack{
-  background-color: #0B1418;
+  background-color: #0B1418 !important;
+}
+.bg-purple {
+  background-color: #392B7F;
+}
+.lightGray{
+  color: #6F7685;
+}
+input {
+  outline: none !important;
+}
+.nav-btn{
+  @apply h-9 w-9 rounded-md bg-lightBlack text-white hover:bg-gray-600 flex items-center justify-center
 }
