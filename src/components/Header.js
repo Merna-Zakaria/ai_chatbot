@@ -9,7 +9,7 @@ const Header = () => {
   const toggleDropdown = () => setIsDropdownOpen(prev => !prev);
 
   return (
-    <div className="w-full h-[68px] bg-darkBlack flex items-center justify-between px-4 sm:px-12 relative">
+    <div className="fixed w-full h-[68px] bg-darkBlack flex items-center justify-between px-4 sm:px-12">
       <p className="text-white text-lg font-semibold">Deploy AI</p>
 
       <div className="flex items-center gap-2 sm:gap-4">

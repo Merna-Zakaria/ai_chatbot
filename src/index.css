@@ -24,6 +24,9 @@ code {
 .bg-purple {
   background-color: #392B7F;
 }
+.purple {
+  color: #39395F;
+}
 .lightGray{
   color: #6F7685;
 }
@@ -32,4 +35,18 @@ input {
 }
 .nav-btn{
   @apply h-9 w-9 rounded-md bg-lightBlack text-white hover:bg-gray-600 flex items-center justify-center
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Thin scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1418; /* Dark track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1B252B; /* Blue thumb */
+  border-radius: 10px;
+  border: 1px solid transparent;
 }

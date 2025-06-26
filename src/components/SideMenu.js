@@ -4,7 +4,7 @@ import { GiFlowerEmblem } from "react-icons/gi";
 
 const SideMenu = () => {
     return (
-        <div className="w-[60px] h-svh bg-darkBlack px-3">
+        <div className="w-[60px] bg-darkBlack px-3">
             <div className="relative group my-7">
                 <button className="nav-btn text-white back text-xl bg-darkBlack">
                     <TiHomeOutline />
