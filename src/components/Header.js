@@ -9,9 +9,8 @@ const Header = () => {
   const toggleDropdown = () => setIsDropdownOpen(prev => !prev);
 
   return (
-    <div className="fixed w-full h-[68px] bg-darkBlack flex items-center justify-between px-4 sm:px-12">
+    <div className="fixed w-full h-[35px] sm:h-[68px] bg-darkBlack flex items-center justify-between px-4 sm:px-12">
       <p className="text-white text-lg font-semibold">Deploy AI</p>
-
       <div className="flex items-center gap-2 sm:gap-4">
         {/* Search input on md+ screens */}
         <div className="relative hidden md:flex w-64">
@@ -58,8 +57,7 @@ const Header = () => {
             </span>
           </div>
 
-          {/* Profile Icon (no tooltip needed here, but you can add one if desired) */}
-          <button className="w-9 h-9 bg-gray-600 rounded-full flex items-center justify-center text-white text-sm focus:outline-none">
+          <button className="w-4 h-4 sm:w-9 sm:h-9 bg-gray-600 rounded-full flex items-center justify-center text-white text-sm focus:outline-none">
             MZ
           </button>
         </div>

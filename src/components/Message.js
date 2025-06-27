@@ -6,6 +6,9 @@ const Message = ({ text, isUser, timestamp }) => (
       {text}
       <div className="text-xs opacity-70">{timestamp}</div>
     </div>
+    {isUser ? <button className="mt-3 mr-3 w-9 h-9 bg-gray-600 rounded-full flex items-center justify-center text-white text-sm focus:outline-none">
+      MZ
+    </button> : ''}
   </div>
 );
 

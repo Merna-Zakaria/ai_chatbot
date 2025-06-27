@@ -24,6 +24,9 @@ code {
 .bg-darkBlack{
   background-color: #0B1418 !important;
 }
+.bg-darkBlue{
+  background-color: #171D2D !important;
+}
 .bg-purple {
   background-color: #392B7F;
 }
@@ -55,4 +58,21 @@ input {
 }
 .mar0auto{
   margin: 0 auto !important;
+}
+.widthWebkit{
+    width: -webkit-fill-available !important;
+}
+.loader {
+  border: 4px solid #f3f3f3;         /* Light grey background */
+  border-top: 4px solid #3498db;     /* Blue spinner */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+  margin: auto; /* center if needed */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
