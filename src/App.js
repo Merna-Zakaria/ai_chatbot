@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className={`flex  pt-[35px] sm:pt-[68px] bg-darkBlack ${openPreview ? 'h-auto sm:h-screen ': 'h-screen'}`}>
+      <div className={`flex  pt-[35px] sm:pt-[68px] bg-darkBlack ${openPreview ? 'h-auto sm:h-screen sm:overflow-hidden': 'overflow-hidden h-screen'}`}>
         <SideMenu />
         <div className='flex flex-wrap w-full bg-lightBlack'>
           <div className={`flex flex-col text-white p-4 ${openPreview ? 'w-full md:w-1/2' : 'w-3/4 sm:mar0auto'} relative`}>
@@ -69,7 +69,7 @@ function App() {
               <p className='z-10 px-4 py-1'>+</p>
               <MdMoreVert className=' lightGray absolute right-3 top-1 z-20' />
             </div>
-            <div ref={chatRef} className="flex-1 h-[380px] overflow-y-auto mb-4 space-y-2 pt-4 w-full">
+            <div ref={chatRef} className="flex-1 max-h-[380px] overflow-y-auto mb-4 space-y-2 pt-4 w-full">
               {messages.map((msg, index) => (
                 <Message key={index} {...msg} />
               ))}
