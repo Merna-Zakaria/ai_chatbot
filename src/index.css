@@ -18,6 +18,9 @@ code {
 .bg-lightBlack {
   background-color: #1B252B;
 }
+.bg-darkGray {
+  background-color: #2C3243 !important;
+}
 .bg-darkBlack{
   background-color: #0B1418 !important;
 }
@@ -34,7 +37,7 @@ input {
   outline: none !important;
 }
 .nav-btn{
-  @apply h-9 w-9 rounded-md bg-lightBlack text-white hover:bg-gray-600 flex items-center justify-center
+  @apply h-9 w-9 rounded-md bg-lightBlack text-white hover:bg-gray-600 flex items-center justify-center cursor-pointer
 }
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -49,4 +52,7 @@ input {
   background-color: #1B252B; /* Blue thumb */
   border-radius: 10px;
   border: 1px solid transparent;
+}
+.mar0auto{
+  margin: 0 auto !important;
 }

@@ -8,6 +8,7 @@ import { IoSend } from "react-icons/io5";
 import { IoIosAttach } from "react-icons/io";
 import { GiFlowerEmblem } from "react-icons/gi";
 import { FaPause } from "react-icons/fa6";
+import { SiProgress } from "react-icons/si";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -53,7 +54,7 @@ function App() {
       <div className='flex pt-[68px] bg-darkBlack h-screen '>
         <SideMenu />
         <div className='flex w-full bg-lightBlack'>
-          <div className={`flex flex-col text-white p-4 mr-2 ${openPreview ? 'sm:w-1/2' : 'w-3/4'}`}>
+          <div className={`flex flex-col text-white p-4 mr-2 ${openPreview ? 'sm:w-1/2' : 'w-3/4 mar0auto'}`}>
             <div ref={chatRef} className="flex-1 h-[380px] overflow-y-auto mb-4 space-y-2 w-full">
               {messages.map((msg, index) => (
                 <Message key={index} {...msg} />
@@ -63,7 +64,7 @@ function App() {
             <div className='flex justify-between items-center mx-4 px-4 h-[30px] bg-purple'>
               <div className='flex items-center'>
                 <GiFlowerEmblem className="text-purple-500" />
-                <span className='px-2 lightGray'>Agent is waiting for your input....</span>
+                <span className='px-2 lightGray'>{openPreview ? 'The AI agent is devising a plan....' : 'Agent is waiting for your input....'}</span>
               </div>
               <p className='flex items-center lightGray'> <FaPause className='lightGray' /> Pause</p>
             </div>
@@ -77,19 +78,28 @@ function App() {
                 placeholder="Type a message..."
               />
               <div className='flex justify-between'>
-                <div className='nav-btn bg-[#2C3243]' >
+                <div className='nav-btn bg-darkGray' >
                   <IoIosAttach className='lightGray' />
                 </div>
                 <div className='flex items-center'>
                   <p className='lightGray'>Have feedback?</p>
-                  <div className='nav-btn bg-[#2C3243]' onClick={handleSend}>
+                  <div className='nav-btn bg-darkGray' onClick={handleSend}>
                     <IoSend className='lightGray' />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {openPreview && <div className="flex items-center justify-center text-white p-4 sm:w-1/2 border-[#39395F] border">
+          {openPreview && <div className="flex items-center justify-center text-white p-4 sm:w-1/2 border-[#39395F] border relative">
+          <div className='flex absolute bg-darkBlack top-0 left-0'>
+            <p className='p-3 bg-darkBlack w-full h-[56px] fixed'></p>
+            <p className='flex align-baseline p-4 bg-lightBlack z-10'>
+              <span className='pt-1'><SiProgress/></span>
+              <span className='px-3'>Progress</span>
+              <span onClick={() => setOpenPreview(false)} className='cursor-pointer'>x</span>
+            </p>
+            <p className='z-10 p-4'>+</p>
+            </div>
            <div>
              <p className='text-white text-center'>This is a demo response.</p>
             <p className='text-white font-bold text-center'>In Progress</p>
